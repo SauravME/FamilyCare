@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgGreen">
+
+    <TextView
+        android:id="@+id/securityUpperText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margin16"
+        android:text="@string/securityText"
+        android:textSize="@dimen/textSizeLarge"
+        android:textColor="@color/black"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pinkCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardHeight"
+        android:layout_margin="@dimen/margin16"
+        app:cardBackgroundColor="@color/pink"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:layout_constraintTop_toBottomOf="@id/securityUpperText" />
+
+
+    <TextView
+        android:id="@+id/textSos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin16"
+        android:elevation="@dimen/elevation8dp"
+        android:text="@string/sos"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeLarge"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/pinkCard"
+        app:layout_constraintTop_toTopOf="@+id/pinkCard" />
+
+    <TextView
+        android:id="@+id/sosMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin16"
+        android:elevation="@dimen/elevation8dp"
+        android:text="@string/sosMessage"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/imageSos"
+        app:layout_constraintStart_toStartOf="@id/pinkCard"
+        app:layout_constraintTop_toBottomOf="@id/textSos"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageSos"
+        android:contentDescription="@string/help_image"
+        android:layout_width="@dimen/imageSize"
+        android:layout_height="@dimen/imageSize"
+        android:elevation="@dimen/elevation8dp"
+        android:layout_margin="@dimen/margin16"
+        android:src="@drawable/ic_sos"
+        app:layout_constraintBottom_toBottomOf="@id/pinkCard"
+        app:layout_constraintEnd_toEndOf="@id/pinkCard"
+        app:layout_constraintTop_toTopOf="@id/pinkCard" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/greenCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardHeight"
+        android:layout_margin="@dimen/margin16"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:layout_constraintTop_toBottomOf="@+id/pinkCard"
+
+        />
+
+    <TextView
+        android:id="@+id/textGuard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin16"
+        android:elevation="@dimen/elevation8dp"
+        android:text="@string/guard"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeLarge"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/greenCard"
+        app:layout_constraintTop_toTopOf="@+id/greenCard" />
+
+    <TextView
+        android:id="@+id/guardMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin16"
+        android:elevation="@dimen/elevation8dp"
+        android:text="@string/guardMessage"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/imageGuard"
+        app:layout_constraintStart_toStartOf="@id/greenCard"
+        app:layout_constraintTop_toBottomOf="@id/textGuard"
+
+        />
+    <ImageView
+        android:id="@+id/imageGuard"
+        android:contentDescription="@string/guard_image"
+        android:layout_width="@dimen/imageSize"
+        android:layout_height="@dimen/imageSize"
+        android:elevation="@dimen/elevation8dp"
+        android:layout_margin="@dimen/margin16"
+        android:src="@drawable/ic_guard"
+        app:layout_constraintBottom_toBottomOf="@id/greenCard"
+        app:layout_constraintEnd_toEndOf="@id/greenCard"
+        app:layout_constraintTop_toTopOf="@id/greenCard" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

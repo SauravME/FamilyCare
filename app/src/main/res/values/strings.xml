@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyFamily</string>
+    <string name="sos">SOS</string>
+    <string name="sosMessage">In case of Emergency, keep telling family members to contact me</string>
+    <string name="guard">Guard</string>
+    <string name="guardMessage">In case of Emergency, keep telling family members to contact me</string>
+    <string name="guard_image">Guard Image</string>
+    <string name="help_image">Help Image</string>
+    <string name="nav_user">User</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_guard">Guard</string>
+    <string name="nav_home">Home</string>
+    <string name="securityText">Security</string>
+    <string name="familyText">Family</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="myName">Saurav Kumar</string>
+    <string name="battery_text">90%</string>
+    <string name="address">Village-Pyarepur, Police_Station- Sarmera, District-Nalanda, State-Bihar, PinCode- 811104</string>
+    <string name="telegram_text">223M</string>
+</resources>
