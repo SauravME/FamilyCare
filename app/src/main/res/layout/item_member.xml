@@ -24,106 +24,135 @@
             android:elevation="@dimen/elevation16dp"
             android:src="@drawable/ic_profile_item_member"
             app:layout_constraintStart_toStartOf="parent"
-            
-            
+
+
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/user_name_item_member"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/profile_item_member"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin16"
             android:elevation="@dimen/elevation16dp"
             android:text="@string/myName"
             android:textSize="@dimen/textSizeLarge"
-            android:layout_marginStart="@dimen/margin16"/>
-        
+            app:layout_constraintStart_toEndOf="@+id/profile_item_member"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/address_item_member"
-            android:maxLines="2"
-            android:ellipsize="end"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/address"
-            app:layout_constraintStart_toEndOf="@+id/profile_item_member"
             android:layout_marginStart="@dimen/margin16"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/address"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_name_item_member"/>
+            app:layout_constraintStart_toEndOf="@+id/profile_item_member"
+            app:layout_constraintTop_toBottomOf="@id/user_name_item_member" />
+
         <LinearLayout
             android:id="@+id/linear_layout_battery"
             android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/profile_item_member"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="@dimen/padding4dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin16"
-            android:background="@color/lightGreen"
-            android:layout_height="wrap_content">
+            android:background="@drawable/corner_rectangle"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding4dp"
+            android:paddingEnd="@dimen/padding4dp"
+            app:layout_constraintEnd_toStartOf="@id/linear_layout_telegram"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_item_member">
+
             <ImageView
                 android:layout_width="@dimen/image_icon_height_item_member"
                 android:layout_height="@dimen/image_icon_height_item_member"
-                android:src="@drawable/ic_battery_item_member"/>
+                android:src="@drawable/ic_battery_item_member" />
+
             <TextView
                 android:id="@+id/battery_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/battery_text"
                 android:layout_marginTop="@dimen/padding4dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:layout_marginStart="@dimen/margin16"
-                />
+                android:text="@string/battery_text"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linear_layout_telegram"
             android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/profile_item_member"
-            app:layout_constraintStart_toEndOf="@id/linear_layout_battery"
-            android:padding="@dimen/padding4dp"
-            android:layout_marginTop="@dimen/margin16"
-
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding4dp"
+            android:paddingEnd="@dimen/padding4dp"
+            app:layout_constraintEnd_toStartOf="@id/linear_layout_wifi"
+            app:layout_constraintStart_toEndOf="@id/linear_layout_battery"
+
+            app:layout_constraintTop_toBottomOf="@+id/profile_item_member"
 
             >
+
             <ImageView
                 android:layout_width="@dimen/image_icon_height_item_member"
                 android:layout_height="@dimen/image_icon_height_item_member"
                 android:src="@drawable/ic_telegram_item_member"
 
                 />
+
             <TextView
                 android:id="@+id/follower_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/telegram_text"
                 android:layout_marginTop="@dimen/padding4dp"
-                android:textSize="16sp"
+                android:text="@string/telegram_text"
                 android:textColor="@color/black"
-                android:layout_marginStart="@dimen/margin16"
-                />
+                android:textSize="16sp" />
 
         </LinearLayout>
-        <ImageView
 
-            android:layout_margin="@dimen/padding4dp"
+        <LinearLayout
+            android:id="@+id/linear_layout_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding4dp"
+            android:paddingEnd="@dimen/padding4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/call_item_member"
+            app:layout_constraintStart_toEndOf="@id/linear_layout_telegram">
+
+            <ImageView
+
+                android:layout_width="@dimen/image_icon_height_item_member"
+                android:layout_height="@dimen/image_icon_height_item_member"
+                android:elevation="@dimen/elevation16dp"
+                android:src="@drawable/ic_wifi_item_member" />
+
+            <TextView
+                android:id="@+id/wifiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding4dp"
+                android:text="WiFi"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/call_item_member"
             android:layout_width="@dimen/image_icon_height_item_member"
             android:layout_height="@dimen/image_icon_height_item_member"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/padding4dp"
+            android:background="@drawable/circle_shape"
             android:elevation="@dimen/elevation16dp"
-            app:layout_constraintStart_toEndOf="@id/linear_layout_telegram"
-            android:src="@drawable/ic_wifi_item_member"
-            />
-       <ImageView
-           android:layout_margin="@dimen/padding4dp"
-           android:layout_width="@dimen/image_icon_height_item_member"
-           android:layout_height="@dimen/image_icon_height_item_member"
-           app:layout_constraintBottom_toBottomOf="parent"
-           android:elevation="@dimen/elevation16dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           android:src="@drawable/ic_call"
-           />
-          
+            android:padding="@dimen/padding4dp"
+            android:src="@drawable/ic_call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

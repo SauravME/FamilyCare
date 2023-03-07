@@ -6,25 +6,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:id="@+id/securityUpperText"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/linear_layout_home_fragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/margin16"
-        android:text="@string/familyText"
-        android:textSize="@dimen/textSizeLarge"
-        android:textColor="@color/black"
-        />
+        app:cardBackgroundColor="@color/lightGreen"
+        >
+
+        <LinearLayout
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="@dimen/image_icon_height_item_member"
+                android:layout_height="@dimen/image_icon_height_item_member"
+                android:layout_weight=".1"
+                android:src="@drawable/ic_location_home_fragment" />
+
+            <TextView
+                android:id="@+id/securityUpperText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight=".8"
+                android:text="@string/familyText"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/image_icon_height_item_member"
+                android:layout_height="@dimen/image_icon_height_item_member"
+                android:layout_weight=".1"
+                android:src="@drawable/ic_three_dots_home_fragment" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         tools:listitem="@layout/item_member"
-        app:layout_constraintTop_toBottomOf="@id/securityUpperText"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_home_fragment"
+        app:layout_constraintBottom_toTopOf="@id/card_invite"
         />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_invite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardHeight"
+        android:layout_margin="@dimen/margin16"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        android:elevation="@dimen/elevation8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_invite"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            tools:listitem="@layout/item_invite"
+            android:layout_marginTop="@dimen/elevation8dp"
+
+            />
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
