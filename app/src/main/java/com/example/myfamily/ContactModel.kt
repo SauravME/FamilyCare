@@ -1,3 +1,10 @@
 package com.example.myfamily
 
-data class ContactModel(val name: String, val phone: String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class ContactModel(
+    val name: String,
+    @PrimaryKey
+    val phone: String)
